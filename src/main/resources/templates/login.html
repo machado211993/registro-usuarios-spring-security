@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <title>Despensa la Alcancia</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+              integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+              crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+              integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+              crossorigin="anonymous">
+
+    </head>
+    <body>
+
+
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed"
+                            data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                            aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span> <span
+                            class="icon-bar"></span> <span class="icon-bar"></span> <span
+                            class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#" th:href="@{/}">Pagina Principal</a>
+                </div>
+            </div>
+        </nav>
+
+        <br>
+        <br>
+        <br>
+        <div align="center">
+            <h1> (Loreto - Corrientes - Argentina) </h1>
+            <h2> Esta pagina está diseñada para nuestros clientes </h2>
+            <h3> Aqui! vas a encontrar el listado de precios semanales y ofertas disponibles </h3>
+            
+            
+            <br>
+            <a href="/"><img width="400"
+                             src="https://cdn.pixabay.com/photo/2015/11/22/17/30/piggy-bank-1056615_1280.jpg"
+                             alt="Pagina principal"></a>
+            <a href="/"><img width="400"
+                             src="https://cdn.pixabay.com/photo/2023/02/18/14/19/food-7798033_1280.jpg"
+                             alt="Pagina principal"></a>
+            <a href="/"><img width="300"
+                             src="https://cdn.pixabay.com/photo/2020/04/24/05/58/piggy-5085242_1280.png"
+                             alt="Pagina principal"></a>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <h4> Inicia sesion para ver el listado de precios y/o ofertas disponibles </h4>
+                    <form th:action="@{/login}" method="post">
+
+                        <div th:if=${param.error}>
+                            <div class="alert alert-danger">Usuario o contraseña
+                                inválidos</div>
+                        </div>
+
+                        <div th:if=${param.logout}>
+                            <div class="alert alert-info">Ha cerrado sesión exitosamente
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label  for="username">Nombre de
+                                usuario : </label> <input id="username"  name="username" type="text" class="form-control"
+                                                      required autofocus="autofocus" placeholder="Digite su email ID">
+                        </div>
+
+                        <div class="form-group">
+                            <label  for="password">Password : </label> <input
+                                id="password" type="password"  name="password" class="form-control" required
+                                autofocus="autofocus" placeholder="Digite su password">
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-6 col-md-offset-3">
+                                    <input type="submit" class="form-control btn btn-primary" name="login-submit" id="login-submit"
+                                           value="Iniciar sesión" />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="form-group">
+                        <span>Si eres nuevo usuario <a th:href="@{/registro}">regístrate
+                                aqui</a></span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    </body>
+    <footer>
+        <br>
+        <div align="center">
+            <a href="#titulo">Ir al comienzo</a>
+            <a href="mailto:manuel.machado.j.m@gmail.com">   Contactame aqui </a>
+            <br>
+            <br>
+            
+            <p><strong> Desarrollador/Autor:</strong> José Manuel Machado  </p>
+            <p><strong> WhatsApp:</strong> 3794-862502</p>
+            <p><strong> Copyright:</strong> WEB &copy; 2023</p>
+
+        </div>
+
+    </footer>
+    <br>
+    <br><!-- <br> -->
+    <br><!-- comment -->
+    <br>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
